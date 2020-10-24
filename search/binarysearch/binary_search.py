@@ -4,7 +4,7 @@ from typing import Any, List, Optional
 
 def binary_search_iter(arr: List[Any], item: Any) -> Optional[int]:
     """
-    Binary search alg that using iter alg(in while construction)
+    Binary search algorithm that uses an iterative algorithm
 
     Args:
         arr (List[Any]):  array for search
@@ -38,7 +38,7 @@ def binary_search_iter(arr: List[Any], item: Any) -> Optional[int]:
 
 def binary_search_recurs(arr: List[Any], item: Any) -> Optional[int]:
     """
-    Binary search alg that using recursion alg
+    Binary search algorithm that uses an recursion algorithm    
 
     Args:
         arr (List[Any]):  array for search
