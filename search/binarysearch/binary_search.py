@@ -13,7 +13,7 @@ def binary_search_iter(arr: List[Any], item: Any) -> Optional[int]:
     Returns:
         Optional[int]: index of item in arr or None if item was not finded        
     """
-    
+
     # Contracts
     assert arr is not None
 
@@ -47,7 +47,7 @@ def binary_search_recurs(arr: List[Any], item: Any) -> Optional[int]:
     Returns:
         Optional[int]: index of item in arr or None if item was not finded        
     """
-    
+
     # Contracts
     assert arr is not None
 
