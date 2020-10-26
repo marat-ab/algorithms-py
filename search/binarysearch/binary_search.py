@@ -36,13 +36,15 @@ def binary_search_iter(arr: List[Any], item: Any) -> Optional[int]:
     return None
 
 
-def binary_search_recurs(arr: List[Any], item: Any) -> Optional[int]:
+def binary_search_recurs(arr: List[Any], item: Any, low = -1, high = -1) -> Optional[int]:
     """
     Binary search algorithm that uses an recursion algorithm    
 
     Args:
         arr (List[Any]):  array for search
         item (Any): element that was searched in arr
+        low (int): low bound of array
+        high (int): high bound of array
 
     Returns:
         Optional[int]: index of item in arr or None if item was not finded        
@@ -52,15 +54,17 @@ def binary_search_recurs(arr: List[Any], item: Any) -> Optional[int]:
     assert arr is not None
 
     # Alg realisation
-    if len(arr) == 0:
+    if len(arr) == 0 or low > high:
         return None
     else:
-        low = 0
-        high = len(arr) - 1
+        if low == -1 and high == -1:
+            low = 0
+            high = len(arr) - 1
+        
         mid = (low + high) // 2
         if arr[mid] < item:
-            return binary_search_recurs(arr[mid+1:], item)
+            return binary_search_recurs(arr, item, mid+1, high)
         elif arr[mid] > item:
-            return binary_search_recurs(arr[:mid], item)
+            return binary_search_recurs(arr, item, low, mid-1)
         else:
             return mid

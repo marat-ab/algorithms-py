@@ -25,6 +25,6 @@ def test_some_variants_of_arrays_recurs_alg():
     for s in range(1, 8):
         tmp_list = list(range(s))
         for i, v in enumerate(tmp_list):
-            assert binary_search_iter(tmp_list, v) == i
+            assert binary_search_recurs(tmp_list, v) == i
 
         assert binary_search_recurs(tmp_list, len(tmp_list)+1) is None
