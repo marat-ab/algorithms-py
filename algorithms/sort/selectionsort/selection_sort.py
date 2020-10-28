@@ -1,5 +1,5 @@
-from typing import Any, List, TypeVar
 import copy
+from typing import Any, List, TypeVar
 
 T = TypeVar('T')
 
@@ -51,3 +51,23 @@ def selection_sort_immutable(arr: List[T]) -> List[T]:
         out_arr[i], out_arr[min_i] = out_arr[min_i], out_arr[i]
 
     return out_arr
+
+
+def selection_sort_mutable(arr: List[T]) -> None:
+    """
+    Immutable realisation of selection sort algorithm
+
+    Args:
+        arr (List[T]): input array with data, T must support operation "<"
+    """
+
+    assert arr is not None
+   
+    if len(arr) <= 1:
+        return arr
+
+    for i in range(len(arr)):
+        min_i = find_min_element(arr[i:]) + i
+        arr[i], arr[min_i] = arr[min_i], arr[i]
+
+    return arr
