@@ -1,5 +1,5 @@
 import pytest
-from search.binarysearch.binary_search import binary_search_iter, binary_search_recurs
+from algorithms.search.binarysearch.binary_search import binary_search_iter, binary_search_recurs
 
 
 def test_empty_array_iter_alg():
