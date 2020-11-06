@@ -62,12 +62,8 @@ def selection_sort_mutable(arr: List[T]) -> None:
     """
 
     assert arr is not None
-   
-    if len(arr) <= 1:
-        return arr
 
-    for i in range(len(arr)):
-        min_i = find_min_element(arr[i:]) + i
-        arr[i], arr[min_i] = arr[min_i], arr[i]
-
-    return arr
+    if len(arr) > 1:
+        for i in range(len(arr)):
+            min_i = find_min_element(arr[i:]) + i
+            arr[i], arr[min_i] = arr[min_i], arr[i]
