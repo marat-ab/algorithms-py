@@ -11,6 +11,7 @@ def test_immutable_ssort_empty_and_one_element_arr():
 
 def test_immutable_ssort_simple_arr():
     assert ss.selection_sort_immutable([3, 2, 5, 1, 6, 8, 9, 4, 7]) == [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    assert ss.selection_sort_immutable([1, 2, 1, 2, 4, 3, 4, 3]) == [1, 1, 2, 2, 3, 3, 4, 4]
 
 
 def test_immutable_ssort_some_arrays():
@@ -37,6 +38,10 @@ def test_mutable_ssort_simple_arr():
     arr = [3, 2, 5, 1, 6, 8, 9, 4, 7]
     ss.selection_sort_mutable(arr)
     assert arr == [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    
+    arr = [1, 2, 1, 2, 4, 3, 4, 3]
+    ss.selection_sort_mutable(arr)
+    assert arr == [1, 1, 2, 2, 3, 3, 4, 4]
 
 
 def test_mutable_ssort_some_arrays():

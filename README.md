@@ -26,3 +26,10 @@ Mutable version of algorithm (mutate income array)
 ```python
 selection_sort_mutable(arr: List[T]) -> None
 ```
+
+### QuickSort
+algorithms/sort/quicksort/quicksort.py
+
+```python
+quicksort(arr: List[T], comparer: Callable[[T, T], bool]) -> List[T]
+```
